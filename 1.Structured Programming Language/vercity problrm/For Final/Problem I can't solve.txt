@@ -1,0 +1,7 @@
+Toggle Character Using recursion  Methode.  Link: https://prepinsta.com/c-program/to-toggle-each-character-in-a-string/
+
+C program to find the maximum occurring character in a string
+
+11.C Program to implement Tower Of Hanoi
+
+13.C Program to Find Biggest Number in Array using Recursion
