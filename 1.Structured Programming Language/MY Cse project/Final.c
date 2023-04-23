@@ -9,7 +9,7 @@
 #include<time.h>
 
 
-    int password=119804;
+    int password=2036;
     char w,spt;
     int plen,key,ascii;
     int count=0;
