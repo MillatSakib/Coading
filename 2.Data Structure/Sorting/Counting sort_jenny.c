@@ -21,7 +21,7 @@ void counting_sort(int arr[],int size, int top){
 }
 int main(){
     int size,top=0;         //counting sort are working for positive and integer value
-    printf("Please enter the array: ");
+    printf("Please enter the size of array: ");
     scanf("%d",&size);
     int arr[size];
     printf("Please enter all element of array: ");
@@ -38,5 +38,6 @@ int main(){
     for(int i=0;i<size;i++){
         printf("%d ",arr[i]);
     }
+    return 0;
 
 }
