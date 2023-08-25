@@ -19,7 +19,7 @@ console.log(hablu_goru.indexOf("ami"));
 var stringToFloat = "43.898";
 stringToFloat = parseFloat(stringToFloat);      //Convert string into float
 console.log(stringToFloat);
-var stringToInt = "53.9";  
+var stringToInt = "53.9";
 stringToInt = parseInt(stringToInt);        //convert string into integer
 console.log(stringToInt);
 var numberToString = 43;
@@ -35,7 +35,7 @@ console.log("Remainder " + (num1 % num2));
 num1 = 0.5;
 console.log(Math.round(num1));          //Math round funtion use if the value is less then 0.5 it converted into 0 and if greater then 0.5 it converted into 1
 num1 = 0.4;
-console.log(Math.round(num1));      
+console.log(Math.round(num1));
 console.log(Math.floor(num1));
 console.log(Math.ceil(num1));
 num1 = Math.random();           //random funtion use for generate random Number
