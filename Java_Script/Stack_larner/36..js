@@ -1,1 +1,0 @@
-ssh-keygen -o -t rsa -C millatsakib01@gmail.com
