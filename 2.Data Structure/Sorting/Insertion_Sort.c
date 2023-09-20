@@ -9,35 +9,35 @@ https://www.youtube.com/watch?v=uL4Nvg95ji0&t=11s&ab_channel=BanglaCodingTutor
 https://www.youtube.com/watch?v=3vtKu8hSFPE&ab_channel=BanglaCodingTutor
 */
 #include <stdio.h>
-void insertion_sort(int len,int arr[len]){
-        int temp,j;
-        for(int i=1;i<len;i++){
-            temp=arr[i];
-            for(j=i-1;j>=0 && arr[j]>temp;j--){
-                arr[j+1]=arr[j];
-            }
-            arr[j+1]=temp;
-        }
 
-        printf("The sorted array are: ");
-        for(int i=0;i<len;i++){
-            printf("%d  ",arr[i]);
+void insertion_sort(int len, int arr[]) {
+    int temp, j;
+    for (int i = 1; i < len; i++) {
+        temp = arr[i];
+        for (j = i - 1; j >= 0 && arr[j] > temp; j--) {
+            arr[j + 1] = arr[j];
         }
+        arr[j + 1] = temp;
+    }
 }
 
-
-
-
-
-int main(){
+int main() {
     int len;
-    printf("Please enter length of array: ");
-    scanf("%d",&len);
-    int arr[len+2];
-    printf("Please enter array element: ");
-    for(int i=0;i<len;i++){
-        scanf("%d",&arr[i]);
+    printf("Please enter the array length: ");
+    scanf("%d", &len);
+    int arr[len];
+
+    printf("Please enter the array values: ");
+    for (int i = 0; i < len; i++) {
+        scanf("%d", &arr[i]);
     }
-    insertion_sort(len,arr);
+
+    insertion_sort(len, arr);
+
+    printf("Sorted array: ");
+    for (int i = 0; i < len; i++) {
+        printf("%d ", arr[i]);
+    }
+
     return 0;
 }

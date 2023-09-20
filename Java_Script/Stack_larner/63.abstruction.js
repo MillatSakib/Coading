@@ -1,4 +1,4 @@
-//If we want to hide data from user or prgramme writer then we use abstruction.. I a word abstruction is a data hiding methde in oop. In javascript we can't directly use of abstruction.(vedio number: 117)
+//If we want to hide data from user or prgramme writer then we use abstruction.. I a word abstruction is a methode of hiding implementing datail or data data in oop. In javascript we can't directly use of abstruction.(vedio number: 117)
 
 var Rectangle = function (width, height) {
   this.width = width;

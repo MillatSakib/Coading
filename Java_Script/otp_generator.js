@@ -6,6 +6,6 @@ function Otp(){
     }
     return otp;
 }
-for(var i=0;i<5000;i++){
+for(var i=0;i<500000;i++){
     console.log("You are registering on Lorem Co. Your OTP is "+Otp());
 }

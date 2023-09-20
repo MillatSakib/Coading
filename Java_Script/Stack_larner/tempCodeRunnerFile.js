@@ -1,1 +1,1 @@
-hi()       //we cann't call from here
+console.log(descriptor1)
