@@ -1,0 +1,20 @@
+1. Data Structures. ----Available+Not lab
+2. Algorithms. ----Available+Not lab
+3. Object Oriented Programming.
+4. Web Programming.//
+5. Digital Logic Design.
+6. Introduction to Electrical Engineering.
+7. Electronic Devices and Circuits & Pulse Techniques. ----Available+Not lab
+8. Database System. ----Available Complete
+9. Computer Architecture. ----Available+Not lab
+10.Microprocessors & Microcontrollers.----Available Complete
+11. Operating System. ----Available Complete
+12. Computer Networking. ----
+13. Graph Theory.
+14. Theory of computation.
+15.Engineering Drawing.
+16.Electrical Drives and Instrumentation
+17.Compiler.
+18.Artificial Intelligence
+19.Computer and Cyber Security
+20.Software Engineering//

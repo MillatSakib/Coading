@@ -1,0 +1,11 @@
+Now using Function, solve all the above problems (Important)
+-> Find factorial using a function 
+-> Reverse array using function 
+-> Find maximum or minimum value of an array 
+-> Find Factorial of a Number Using Recursion 
+-> ASCII value of a character 
+-> Check an alphabet is vowel or consonant
+-> Convert upper case to lower case and lower case to upper case 
+-> Find out exponential without power method
+-> Do addition and subtraction operation of matrices 
+-> Do multiplication operation of matrices
