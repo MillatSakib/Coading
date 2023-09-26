@@ -30,7 +30,7 @@ struct linked_list
 };
 
 typedef struct linked_list node;
-
+// by using typedef(typedefination) we can change name of custom data type of premetive data type.
 node *head = NULL, *last = NULL;
 
 void create_linked_list();
