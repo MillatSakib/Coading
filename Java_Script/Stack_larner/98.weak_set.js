@@ -11,7 +11,7 @@ Weakset is a different type of set. When we normolly declare a set and if there 
 
 let a = { a: '10' }, b = { b: 20 }
 
-let set = new Set(a, b)
+let set = new Set([a, b])
 
 a = null	//here by using null we say to the compiler clear all data which are related to it.And when we write a=null, normolly it should clear all memoey from anywhere. But it can't do it.
 
