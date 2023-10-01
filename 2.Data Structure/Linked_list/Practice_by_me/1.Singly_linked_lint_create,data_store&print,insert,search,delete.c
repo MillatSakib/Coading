@@ -31,6 +31,13 @@ linked_list_op *head = NULL, *tail = NULL; // here we take these pointer variabl
 void linked_list();                 // this function is basic for my linked list. By using this function we insert the value in my list
 void create_linked_list(int value); // we store all data in our running environment using this function.
 void print_linked_list();           // we print the linked list using this function.
+void insert_at_last(int value);
+void inset_at_first(int value);
+void insert_after(int key, int value);      // In this fucntion we take a key. If there has the same value of key then we add that value after the key value
+void delete_item(int value);        //Using this function we will delete an element form linked list
+void search_item(int value);        //You know by using this function I will search an element form linked list
+
+
 
 int main()
 {
@@ -104,3 +111,118 @@ void print_linked_list()
 
     puts(" ");
 }
+
+
+void insert_at_last(int value){
+
+    linked_list_op *temp_node;
+    temp_node = (linked_list_op*) malloc(sizeof(linked_list_op));
+
+    temp_node->number = value;
+    temp_node->next = NULL;
+
+    //For frist element
+    if(head == NULL){
+
+        head = temp_node;
+        tail = temp_node;
+    }
+
+    else{
+        tail->next= temp_node;
+        tail = temp_node;
+    }
+
+
+
+
+}
+
+
+
+void insert_after(int key, int value){
+
+    linked_list_op *myNode = head;
+    int flag = 0;
+        while(myNode != NULL){
+            if(myNode-> number == key){
+            linked_list_op *newNode = (linked_list_op*)malloc(sizeof(linked_list_op));
+            newNode->number = value;
+            newNode->next = myNode->next;
+            myNode->next = newNode;
+
+            printf("%d is inserted after %d\n",value, key);
+            flag = 1;
+            break;
+            }
+            else{
+                myNode = myNode->next;
+            }
+        }
+        if(flag == 0){
+            printf("Key not found!\n");
+        }
+}
+
+
+
+
+void delete_item(int value){
+
+    linked_list_op *myNode = head, *previous = NULL;
+
+    int flag = 0;
+
+    while(myNode!=NULL){
+        if(myNode->number==value){
+            if(previous==NULL){
+                head = myNode->next;
+            }
+            else{
+                previous->next= myNode->next;
+            }
+            printf("%d is deleted form list \n",value);
+            flag = 1;
+            free(myNode);
+            break;
+        }
+
+        previous = myNode;
+        myNode = myNode->next;
+    }
+    if(flag==0){
+    printf("key not found!\n");;
+    }
+
+}
+
+void search_item(int value){
+    linked_list_op *searchNode = head;
+    int flag = 0;
+
+    while(searchNode!=NULL){
+
+        if(searchNode->number==value){
+            printf("%d is present in this list. Memory address is %d\n", value, searchNode);
+            flag = 1;
+            break;
+        }
+        else{
+            searchNode = searchNode->next;
+        }
+
+
+
+    }
+    if (flag == 0){
+        printf("Item not Found\n");
+    }
+
+}
+
+
+
+
+
+
+

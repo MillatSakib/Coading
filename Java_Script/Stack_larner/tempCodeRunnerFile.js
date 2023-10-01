@@ -1,1 +1,2 @@
-'use strict'
+
+c1.draw()
