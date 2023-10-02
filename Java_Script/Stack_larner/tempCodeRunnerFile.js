@@ -1,2 +1,1 @@
-
-c1.draw()
+throw 
