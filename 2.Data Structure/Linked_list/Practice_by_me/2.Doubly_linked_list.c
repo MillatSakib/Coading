@@ -12,7 +12,6 @@ void deleteNode(int position);
 
 struct doub_linked_list
 {
-
     struct doub_linked_list *prev;
     int number;
     struct doub_linked_list *next;
