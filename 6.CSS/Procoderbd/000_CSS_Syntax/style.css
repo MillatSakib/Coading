@@ -4,8 +4,13 @@ color => Property
 red => Value 
 */
 h1 {
+  /* Here we use selector to select html element. To select tag we simply write the tag on css file*/
+
   color: red; /* => Declaration */
-  font-size: 60px; /* => Declaration */
+
+  /*here we set color using color property. In css we use property: value to do anything */
+
+  font-size: 60px; /*here px is measurement unit of font size. We can also use another unit like em,rm;*/
 }
 p {
   color: blue;

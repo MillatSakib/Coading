@@ -2,6 +2,8 @@ body {
   background: url(bg.jpg);
 }
 h1 {
+  /*We know CSS file are compile line by line. So if there have same property into same selector then which property are written at last that property get higher priority. So we will get the color of last line.*/
+ 
   color: aqua;
   color: #0000ff;
   color: #00ff00;

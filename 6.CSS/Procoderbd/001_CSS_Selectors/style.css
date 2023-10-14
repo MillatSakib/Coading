@@ -14,8 +14,12 @@ red => Value
   padding: 0;
 }
 h1 {
+  /* Here we use selector to select html element. To select tag we simply write the tag on css file*/
   color: red; /* => Declaration */
+  /*here we set color using color property. In css we use property: value to do anything */
   font-size: 60px; /* => Declaration */
+
+  /*here px is measurement unit of font size. We can also use another unit like em,rm;*/
 }
 p {
   font-size: 18px;
@@ -27,12 +31,13 @@ div {
   margin-bottom: 20px;
 }
 div p {
+  /* here we select paragraph which are under on div*/
   color: black;
 }
 .text-bk {
   color: red;
   text-align: center;
-  background: aqua;
+  background: aqua; /*h1 and h4 are not get the the background color because these are not take background by default. You must have to add text-bk class into h1 and h4. then it will work perfectly.The concept of margin, padding are also same*/
   margin: 20px;
 }
 .first-div {

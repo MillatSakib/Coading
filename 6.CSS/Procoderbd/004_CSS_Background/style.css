@@ -1,17 +1,22 @@
 body {
   background: url(bg.jpg);
-  background-attachment: scroll;
+  background-attachment: scroll;  /**/
 }
 div {
-  background-color: rgba(240, 128, 128, 0.7);
+  background-color: rgba(240, 128, 128, 0.7); 
+  
+  /*rgba are use to make tranparecy on color. Here a means alpha which means the transparecy level.*/
+
   background-image: url(css.png);
   background-size: 150px 150px;
-  /* background-repeat: repeat-x;
-  background-repeat: repeat-y; */
-  background-repeat: no-repeat;
+  /* background-repeat: repeat-x; //if we use it then the bg image repeat only x axis 
+  background-repeat: repeat-y; //if we use it then the bg image repeat only y axis 
+  */
+  background-repeat: no-repeat; /*if we do not want any repeat then use this.*/
 
-  background-position: center right;
+  background-position: center right;  /*here we control that where the background image position.*/
 
   /* Shorthand */
   background: #f78fb3 url(css.png) no-repeat center;
+  /*full short hand are:  background: lightblue url("img_tree.gif") no-repeat fixed center;*/
 }
