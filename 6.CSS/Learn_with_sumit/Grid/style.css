@@ -1,0 +1,54 @@
+.flex-continer{
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-wrap: wrap-reverse; */
+    border: 2px solid blue;
+    /* flex-direction: row; /*flex-derection are by default row */
+    padding: 20px;
+}
+
+.flex1{
+    color: white;
+    text-align: center;
+    height: 20px;
+    width: 20px;
+    margin: 3px 10px;
+    background-color: red;
+    
+}
+
+
+.flex-continer-rev{
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    border: 2px solid blue;
+    padding: 20px;
+}
+
+
+.flex-continer-col{
+    margin-top: 10px;
+    display: flex;
+    height: 100px;
+    flex-flow: column wrap;
+    border: 2px solid blue;
+    padding: 20px;
+}
+
+
+.flex-continer-col-rev{
+    margin-top: 10px;
+    display: flex;
+    flex-flow: column-reverse wrap;
+    /* height: 100px; */
+    border: 2px solid blue;
+    padding: 20px;
+}
+
+.flex-continer-col-rev .flexBasis{
+    flex-basis: 5px;
+    /* min-width: 50px; /*we donot use min-width in flex-box. We use flex basis. Because flex-basis are use for resposive design./. */
+}

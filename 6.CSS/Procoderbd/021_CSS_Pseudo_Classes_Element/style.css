@@ -1,4 +1,5 @@
 a:hover {
+  /* This is Psudo class */
   color: red;
 }
 a:visited {
@@ -22,6 +23,7 @@ body {
   background-position: center center;
 }
 body::before {
+  /* This is Psudo element */
   content: 'Element';
   background-image: url(bg2.jpg);
   background-size: 100px 300px;

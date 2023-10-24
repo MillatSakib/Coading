@@ -1,110 +1,245 @@
-#include <stdio.h>
-#include <stdlib.h>
+/*
 
-// Maximum size of the double ended queue
-#define MAX_SIZE 10
+Resource Link: https://www.dremendo.com/c-programming-tutorial/c-double-ended-queue
 
-// Structure of the double ended queue
-typedef struct Queue {
-  int *array;
-  int front;
-  int rear;
-  int size;
-} Queue;
+https://allcprogrammingandalgorithm.wordpress.com/double-ended-queue-dequeue/#:~:text=deque%20is%20implemented%20using%20either,followed%20by%20Dequeue%5B0%5D.
 
-// Function to initialize the double ended queue
-Queue *initQueue() {
-  Queue *queue = (Queue *)malloc(sizeof(Queue));
-  queue->array = (int *)malloc(sizeof(int) * MAX_SIZE);
-  queue->front = 0;
-  queue->rear = -1;
-  queue->size = 0;
-  return queue;
+https://www.javatpoint.com/ds-deque
+
+
+
+
+*/
+
+
+# include<stdio.h>
+# define Size 5
+
+int deque_arr[Size];
+int front = -1;
+int rear = -1;
+
+/*Begin of insert_rear*/
+void insert_rear()
+{
+    int added_item;
+    if((front == 0 && rear == Size-1) || (front == rear+1))
+    {   printf("Queue Overflow\n");
+        return;}
+    if (front == -1)  /* if queue is initially empty */
+    {   front = 0;
+        rear = 0;}
+    else
+    if(rear == Size-1)  /*rear is at last position of queue */
+        rear = 0;
+    else
+        rear = rear+1;
+
+    printf("Input the element for adding in queue : ");
+    scanf("%d", &added_item);
+    deque_arr[rear] = added_item ;
 }
+/*End of insert_rear*/
 
-// Function to insert an element at the front of the double ended queue
-void enqueueFront(Queue *queue, int data) {
-  if (queue->size == MAX_SIZE) {
-    printf("Queue is full\n");
-    return;
-  }
+/*Begin of insert_front*/
+void insert_front()
+{   int added_item;
+    if((front == 0 && rear == Size-1) || (front == rear+1))
+    {   printf("Queue Overflow \n");
+        return;  }
+    if (front == -1)/*If queue is initially empty*/
+    {   front = 0;
+        rear = 0;    }
+    else
+    if(front== 0)
+        front=Size-1;
+    else
+        front=front-1;
+    printf("Input the element for adding in queue : ");
+    scanf("%d", &added_item);
+    deque_arr[front] = added_item ;  }
+/*End of insert_front*/
 
-  queue->front = (queue->front - 1 + MAX_SIZE) % MAX_SIZE;
-  queue->array[queue->front] = data;
-  queue->size++;
+/*Begin of delete_front*/
+void delete_front()
+{   if (front == -1)
+    {   printf("Queue Underflow\n");
+        return ;
+    }
+    printf("Element deleted from queue is : %d\n",deque_arr[front]);
+    if(front == rear) /*Queue has only one element */
+    {   front = -1;
+        rear=-1;
+    }
+    else
+        if(front == Size-1)
+            front = 0;
+        else
+            front = front+1;
 }
+/*End of delete_front*/
 
-// Function to insert an element at the back of the double ended queue
-void enqueueBack(Queue *queue, int data) {
-  if (queue->size == MAX_SIZE) {
-    printf("Queue is full\n");
-    return;
-  }
+/*Begin of delete_rear*/
+void delete_rear()
+{
+    if (front == -1)
+    {
+        printf("Queue Underflow\n");
+        return ;
+    }
+    printf("Element deleted from queue is : %d\n",deque_arr[rear]);
+    if(front == rear) /*queue has only one element*/
+    {
+        front = -1;
+        rear=-1;
+    }
+    else
+        if(rear == 0)
+            rear=Size-1;
+        else
+            rear=rear-1;    }
+/*End of delete_rear*/
 
-  queue->rear = (queue->rear + 1) % MAX_SIZE;
-  queue->array[queue->rear] = data;
-  queue->size++;
+/*Begin of input_que*/
+void display_queue()
+{
+    int front_pos = front,rear_pos = rear;
+
+    if(front == -1)
+    {   printf("Queue is empty\n");
+        return;
+    }
+    printf("Queue elements :\n");
+    if( front_pos <= rear_pos )
+    {
+        while(front_pos <= rear_pos)
+        {
+            printf("%d ",deque_arr[front_pos]);
+            front_pos++;
+        }
+    }
+    else
+    {
+        while(front_pos <= Size-1)
+        {   printf("%d ",deque_arr[front_pos]);
+            front_pos++;
+        }
+        front_pos = 0;
+        while(front_pos <= rear_pos)
+        {
+            printf("%d ",deque_arr[front_pos]);
+            front_pos++;
+        }
+    }
+    printf("\n");
 }
+/*End of display_queue*/
 
-// Function to delete an element from the front of the double ended queue
-int dequeueFront(Queue *queue) {
-  if (queue->size == 0) {
-    printf("Queue is empty\n");
-    return -1;
-  }
+/*Begin of input_que*/
+void input_que()
+{   int choice;
+    do
+    {   printf("1.Insert at rear\n");
+        printf("2.Delete from front\n");
+        printf("3.Delete from rear\n");
+        printf("4.Display\n");
+        printf("5.Quit\n");
+        printf("Enter your choice : ");
+        scanf("%d",&choice);
 
-  int data = queue->array[queue->front];
-  queue->front = (queue->front + 1) % MAX_SIZE;
-  queue->size--;
-  return data;
+        switch(choice)
+        {   case 1:
+            insert_rear();
+            break;
+         case 2:
+            delete_front();
+            break;
+         case 3:
+            delete_rear();
+            break;
+         case 4:
+            display_queue();
+            break;
+         case 5:
+            break;
+         default:
+            printf("Wrong choice\n");
+        }
+    }while(choice!=5);
 }
+/*End of input_que*/
 
-// Function to delete an element from the back of the double ended queue
-int dequeueBack(Queue *queue) {
-  if (queue->size == 0) {
-    printf("Queue is empty\n");
-    return -1;
-  }
-
-  int data = queue->array[queue->rear];
-  queue->rear = (queue->rear - 1 + MAX_SIZE) % MAX_SIZE;
-  queue->size--;
-  return data;
+/*Begin of output_que*/
+void output_que()
+{   int choice;
+    do
+    {   printf("1.Insert at rear\n");
+        printf("2.Insert at front\n");
+        printf("3.Delete from front\n");
+        printf("4.Display\n");
+        printf("5.Quit\n");
+        printf("Enter your choice : ");
+        scanf("%d",&choice);
+        switch(choice)
+        {
+         case 1:
+            insert_rear();
+            break;
+         case 2:
+            insert_front();
+            break;
+         case 3:
+            delete_front();
+            break;
+         case 4:
+            display_queue();
+            break;
+         case 5:
+            break;
+         default:
+            printf("Wrong choice\n");
+        }
+    }while(choice!=5);
 }
+/*End of output_que*/
 
-// Function to check if the double ended queue is empty
-int isEmptyQueue(Queue *queue) {
-  return queue->size == 0;
+/*Begin of main*/
+main()
+{   int choice;
+    printf("1.Input restricted dequeue\n");
+    printf("2.Output restricted dequeue\n");
+    printf("Enter your choice : ");
+    scanf("%d",&choice);
+    switch(choice)
+    {
+     case 1 :
+        input_que();
+        break;
+     case 2:
+        output_que();
+        break;
+     default:
+        printf("Wrong choice\n");
+    }
 }
+/*End of main
+Output :-
 
-// Function to print the double ended queue
-void printQueue(Queue *queue) {
-  for (int i = queue->front; i <= queue->rear; i++) {
-    printf("%d ", queue->array[i]);
-  }
-  printf("\n");
-}
+    ***** MAIN MENU *****
+    1.Input restricted deque
+    2.Output restricted deque
+    Enter your option : 1
+    INPUT RESTRICTED DEQUEUE
+    1.Insert at right
+    2.Delete from left
+    3.Delete from right
+    4.Display
+    5.Quit
+    Enter your option : 1
+    Enter the value to be added : 5
+    Enter the value to be added : 10
+    Enter your option : 2
+    The deleted element is : 5
+    Enter your option : 5
 
-// Main function
-int main() {
-  Queue *queue = initQueue();
-
-  // Enqueue elements at the front and back of the queue
-  enqueueFront(queue, 10);
-  enqueueBack(queue, 20);
-  enqueueFront(queue, 30);
-  enqueueBack(queue, 40);
-
-  // Print the queue
-  printQueue(queue);
-
-  // Dequeue elements from the front and back of the queue
-  printf("Dequeued element from the front: %d\n", dequeueFront(queue));
-  printf("Dequeued element from the back: %d\n", dequeueBack(queue));
-
-  // Print the queue
-  printQueue(queue);
-
-  return 0;
-}
-
+    */

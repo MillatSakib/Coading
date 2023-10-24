@@ -1,3 +1,8 @@
+/*
+
+z-index will not work with static position. For using z-index you have to use relative,absolute or fixed position.
+
+*/
 body {
   margin: 0;
 }

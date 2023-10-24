@@ -1,3 +1,10 @@
+/* 
+
+If we want to use top or left property then we have to chage the value of position form static to relative.
+You know position absolute are alawys depends on position relative. And if we use absolute on a div then the parent div must be a position relative or position fixed.
+
+*/
+
 body {
   margin: 0;
 }
@@ -5,6 +12,7 @@ div {
   background: aqua;
   width: 400px;
   height: 400px;
+  /*position: static //this the default value of div position.*/
   margin: 0;
   /* margin-left: 20px;
   margin-top: 20px; */

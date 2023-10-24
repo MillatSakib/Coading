@@ -1,16 +1,20 @@
 p {
   color: blueviolet;
 }
-div p {
+div p {   
+  /* this select all the p which under of div. if there are another element of div and that have p, it will apply also on the element. like div>section>p also change.*/
   font-weight: bold;
 }
 div > p {
+  /* this will select only which p directly child of div.it can slect div>p,p,p but can't select div>section>p */
   color: tomato;
 }
 div + p {
+  /* this will select only one p after div */
   color: blue;
 }
 div ~ p {
+  /* this will select all p after div */
   color: aqua;
 }
 
