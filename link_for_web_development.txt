@@ -18,3 +18,25 @@ https://fonts.google.com/icons
      -----------------
 
 https://flatuicolors.com/
+
+
+
+
+
+
+     -----------------
+     | Project Idea |
+     -----------------
+
+https://www.codingnepalweb.com/
+https://skillcrush.com/blog/projects-you-can-do-with-javascript/
+https://www.codewithrandom.com/2023/02/10/50-front-end-projects-html-css-javascript-project-for-frontend-developers-codewithrandom/
+https://www.geekshelp.in/p/html-css-projects_5.html
+
+
+
+     ---------------------
+     | Frontend Practice |
+     ---------------------
+
+https://www.frontendmentor.io/
