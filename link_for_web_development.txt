@@ -40,3 +40,4 @@ https://www.geekshelp.in/p/html-css-projects_5.html
      ---------------------
 
 https://www.frontendmentor.io/
+https://frontendmentor.io/challenges?languages=CSS%2CJS&sort=difficulty%7Casc&type=free%2Cfree-plus
