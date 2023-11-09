@@ -12,6 +12,8 @@ https://unsplash.com/
 https://icons.getbootstrap.com/
 https://fontawesome.com/icons
 https://fonts.google.com/icons
+https://www.flaticon.com/
+https://www.iconfinder.com/
 
      -----------------
      | Color Pattern |
