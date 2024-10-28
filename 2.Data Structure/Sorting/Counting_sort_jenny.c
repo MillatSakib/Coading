@@ -16,8 +16,9 @@ void counting_sort(int arr[],int size, int top){
         }
         for(int i=0;i<size;i++){
             arr[i]=b[i];
+            printf("%d ",arr[i]);
         }
-    
+
 }
 int main(){
     int size,top=0;         //counting sort are working for positive and integer value
@@ -31,13 +32,10 @@ int main(){
     {
         top=arr[i];
     }
-    
+
     }
-    counting_sort(arr,size,top);
     printf("The sorted array are(using counting sort): ");
-    for(int i=0;i<size;i++){
-        printf("%d ",arr[i]);
-    }
+    counting_sort(arr,size,top);
     return 0;
 
 }
