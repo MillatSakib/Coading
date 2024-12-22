@@ -1,3 +1,31 @@
+/*
+
+Input:
+
+Enter Number of Vertices-
+5
+
+Enter Number of Edges-
+7
+
+Enter The Edges:
+A B
+A C
+A D
+A E
+B C
+
+C D
+C E
+Output:
+0 1 1 1 1
+1 0 1 0 0
+1 1 0 1 1
+1 0 1 0 0
+1 0 1 0 0
+
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
